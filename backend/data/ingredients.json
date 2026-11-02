@@ -1,0 +1,156 @@
+[
+  {
+    "slug": "chicken-breast",
+    "name": "Куриная грудка",
+    "image": "https://www.themealdb.com/images/ingredients/Chicken.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "chicken_breast"
+  },
+  {
+    "slug": "beef",
+    "name": "Говядина",
+    "image": "https://www.themealdb.com/images/ingredients/Beef.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "beef"
+  },
+  {
+    "slug": "pork",
+    "name": "Свинина",
+    "image": "https://www.themealdb.com/images/ingredients/Pork.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "pork"
+  },
+  {
+    "slug": "salmon",
+    "name": "Лосось",
+    "image": "https://www.themealdb.com/images/ingredients/Salmon.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "salmon"
+  },
+  {
+    "slug": "shrimp",
+    "name": "Креветки",
+    "image": "https://www.themealdb.com/images/ingredients/Shrimp.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "shrimp"
+  },
+  {
+    "slug": "egg",
+    "name": "Яйца",
+    "image": "https://www.themealdb.com/images/ingredients/Egg.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "egg"
+  },
+  {
+    "slug": "milk",
+    "name": "Молоко",
+    "image": "https://www.themealdb.com/images/ingredients/Milk.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "milk"
+  },
+  {
+    "slug": "butter",
+    "name": "Сливочное масло",
+    "image": "https://www.themealdb.com/images/ingredients/Butter.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "butter"
+  },
+  {
+    "slug": "cheese",
+    "name": "Сыр",
+    "image": null,
+    "furnitureType": "refrigerator",
+    "mealDbName": "cheddar_cheese"
+  },
+  {
+    "slug": "tomato",
+    "name": "Помидоры",
+    "image": "https://www.themealdb.com/images/ingredients/Tomato.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "tomato"
+  },
+  {
+    "slug": "carrot",
+    "name": "Морковь",
+    "image": "https://www.themealdb.com/images/ingredients/Carrot.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "carrot"
+  },
+  {
+    "slug": "mushroom",
+    "name": "Шампиньоны",
+    "image": "https://www.themealdb.com/images/ingredients/Mushrooms.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "mushrooms"
+  },
+  {
+    "slug": "lemon",
+    "name": "Лимон",
+    "image": "https://www.themealdb.com/images/ingredients/Lemon.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "lemon"
+  },
+  {
+    "slug": "garlic",
+    "name": "Чеснок",
+    "image": "https://www.themealdb.com/images/ingredients/Garlic.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "garlic"
+  },
+  {
+    "slug": "onion",
+    "name": "Лук",
+    "image": "https://www.themealdb.com/images/ingredients/Onion.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "onion"
+  },
+  {
+    "slug": "potato",
+    "name": "Картофель",
+    "image": "https://www.themealdb.com/images/ingredients/Potato.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "potato"
+  },
+  {
+    "slug": "rice",
+    "name": "Рис",
+    "image": "https://www.themealdb.com/images/ingredients/Rice.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "rice"
+  },
+  {
+    "slug": "pasta",
+    "name": "Макароны",
+    "image": "https://www.themealdb.com/images/ingredients/Spaghetti.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "spaghetti"
+  },
+  {
+    "slug": "flour",
+    "name": "Мука",
+    "image": "https://www.themealdb.com/images/ingredients/Flour.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "flour"
+  },
+  {
+    "slug": "sugar",
+    "name": "Сахар",
+    "image": "https://www.themealdb.com/images/ingredients/Sugar.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "sugar"
+  },
+  {
+    "slug": "salt",
+    "name": "Соль",
+    "image": "https://www.themealdb.com/images/ingredients/Salt.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "salt"
+  },
+  {
+    "slug": "olive-oil",
+    "name": "Оливковое масло",
+    "image": null,
+    "furnitureType": "wardrobe",
+    "mealDbName": "olive_oil"
+  }
+]

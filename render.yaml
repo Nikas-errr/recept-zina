@@ -1,0 +1,12 @@
+# Blueprint для автодеплоя Recept_zina на Render (render.com).
+# Необязательный файл: можно создать сервис и через сайт Render,
+# но с ним достаточно нажать "New -> Blueprint" и выбрать репозиторий.
+services:
+  - type: web
+    name: recept-zina            # имя сервиса = часть ссылки recept-zina.onrender.com
+    runtime: python
+    rootDir: backend             # все команды выполняются из папки backend
+    plan: free                   # бесплатный план (засыпает после простоя)
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    healthCheckPath: /api/health # Render считает сервис живым, если health отвечает

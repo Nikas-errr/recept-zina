@@ -1,0 +1,7 @@
+fastapi           # веб-фреймворк: роутеры, автоматическая документация
+uvicorn[standard] # сервер, который запускает приложение
+pydantic          # схемы-«формы» данных и автопроверка (v2 идёт вместе с fastapi)
+requests          # HTTP-запросы к TheMealDB
+python-dotenv     # чтение файла .env в config.py
+pytest            # тесты
+httpx             # нужен fastapi.testclient для тестов без запуска сервера

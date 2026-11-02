@@ -1,0 +1,10 @@
+{
+    // Какой Python использовать в этом проекте: из виртуального окружения
+    // backend/.venv — именно там установлены fastapi, uvicorn и pytest.
+    "python.defaultInterpreterPath": "${workspaceFolder}/backend/.venv/Scripts/python.exe",
+
+    // Включить боковую панель Testing (значок колбы) на pytest.
+    "python.testing.pytestEnabled": true,
+    // Тесты запускаются из папки backend — там лежат pytest.ini и app/.
+    "python.testing.cwd": "${workspaceFolder}/backend"
+}
