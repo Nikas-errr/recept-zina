@@ -73,3 +73,43 @@ class ErrorResponse(BaseModel):
     """Понятная ошибка вместо traceback — используется для кодов 400 и 503."""
 
     message: str
+
+
+# --- Авторизация ---
+# Честная пометка: исходное ТЗ запрещало авторизацию. Она появилась по
+# решению команды — фронтенд уже отправляет email и пароль на /auth/login.
+
+
+class UserCreate(BaseModel):
+    """Тело запроса на регистрацию и вход (email + пароль)."""
+
+    email: str = Field(description="Электронная почта, например name@mail.ru")
+    password: str = Field(min_length=8, description="Минимум 8 символов")
+
+    @field_validator("email")
+    @classmethod
+    def normalize_email(cls, value: str) -> str:
+        """Убираем пробелы и приводим к нижнему регистру, чтобы
+        «Vasya@Mail.RU» и «vasya@mail.ru» были одним пользователем."""
+        email = value.strip().lower()
+        if " " in email or "@" not in email or "." not in email.split("@")[-1]:
+            raise ValueError("Похоже, это не электронная почта")
+        return email
+
+
+class UserOut(BaseModel):
+    """Данные пользователя, которые можно показывать (без пароля!)."""
+
+    id: int
+    email: str
+
+
+class TokenResponse(BaseModel):
+    """Ответ на регистрацию и вход: JWT-токен + данные пользователя.
+
+    Фронтенд ждёт именно access_token (NextAuth, LoginResponse).
+    """
+
+    access_token: str
+    token_type: str = "bearer"
+    user: UserOut

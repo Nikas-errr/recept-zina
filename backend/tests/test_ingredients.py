@@ -26,3 +26,12 @@ def test_unknown_furniture_type_returns_422(client):
     response = client.get("/api/ingredients", params={"furnitureType": "fridge"})
 
     assert response.status_code == 422
+
+
+def test_oven_type_is_accepted(client):
+    # oven добавлен по просьбе фронтендера; пока у него нет продуктов,
+    # но тип должен приниматься и отвечать пустым списком, а не 422.
+    response = client.get("/api/ingredients", params={"furnitureType": "oven"})
+
+    assert response.status_code == 200
+    assert response.json() == {"data": []}

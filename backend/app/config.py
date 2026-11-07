@@ -27,4 +27,15 @@ REQUEST_TIMEOUT = 10
 MAX_RESULTS = 5
 
 # Допустимые значения параметра furnitureType у GET /api/ingredients.
-ALLOWED_FURNITURE_TYPES = ("refrigerator", "wardrobe")
+# oven добавлен по просьбе фронтендера (у него на сайте есть вкладка
+# «духовка»); пока у oven нет своих продуктов — вкладка вернёт пустой список.
+ALLOWED_FURNITURE_TYPES = ("refrigerator", "wardrobe", "oven")
+
+# --- Авторизация ---
+# Секрет, которым подписываются JWT-токены. В .env.example есть поле
+# AUTH_SECRET: на публике обязательно поставить туда своё случайное
+# значение, иначе кто угодно сможет подделывать токены.
+AUTH_SECRET = os.getenv("AUTH_SECRET", "dev-secret-change-me-before-deploy")
+
+# Сколько секунд живёт токен после входа (неделя).
+AUTH_TOKEN_EXPIRE_SECONDS = 7 * 24 * 3600

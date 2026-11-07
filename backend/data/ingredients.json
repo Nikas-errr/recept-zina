@@ -91,6 +91,202 @@
     "mealDbName": "lemon"
   },
   {
+    "slug": "bacon",
+    "name": "Бекон",
+    "image": "https://www.themealdb.com/images/ingredients/Bacon.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "bacon"
+  },
+  {
+    "slug": "sausages",
+    "name": "Сосиски",
+    "image": "https://www.themealdb.com/images/ingredients/Sausages.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "sausages"
+  },
+  {
+    "slug": "lamb",
+    "name": "Баранина",
+    "image": "https://www.themealdb.com/images/ingredients/Lamb.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "lamb"
+  },
+  {
+    "slug": "turkey",
+    "name": "Индейка",
+    "image": "https://www.themealdb.com/images/ingredients/Turkey.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "turkey"
+  },
+  {
+    "slug": "ham",
+    "name": "Ветчина",
+    "image": "https://www.themealdb.com/images/ingredients/Ham.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "ham"
+  },
+  {
+    "slug": "tuna",
+    "name": "Тунец",
+    "image": "https://www.themealdb.com/images/ingredients/Tuna.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "tuna"
+  },
+  {
+    "slug": "cod",
+    "name": "Треска",
+    "image": "https://www.themealdb.com/images/ingredients/Cod.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "cod"
+  },
+  {
+    "slug": "mussels",
+    "name": "Мидии",
+    "image": "https://www.themealdb.com/images/ingredients/Mussels.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "mussels"
+  },
+  {
+    "slug": "cream",
+    "name": "Сливки",
+    "image": "https://www.themealdb.com/images/ingredients/Cream.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "cream"
+  },
+  {
+    "slug": "sour-cream",
+    "name": "Сметана",
+    "image": null,
+    "furnitureType": "refrigerator",
+    "mealDbName": "sour_cream"
+  },
+  {
+    "slug": "yogurt",
+    "name": "Йогурт",
+    "image": "https://www.themealdb.com/images/ingredients/Yogurt.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "yogurt"
+  },
+  {
+    "slug": "mozzarella",
+    "name": "Моцарелла",
+    "image": "https://www.themealdb.com/images/ingredients/Mozzarella.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "mozzarella"
+  },
+  {
+    "slug": "parmesan",
+    "name": "Пармезан",
+    "image": "https://www.themealdb.com/images/ingredients/Parmesan.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "parmesan"
+  },
+  {
+    "slug": "feta",
+    "name": "Фета",
+    "image": "https://www.themealdb.com/images/ingredients/Feta.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "feta"
+  },
+  {
+    "slug": "cucumber",
+    "name": "Огурец",
+    "image": "https://www.themealdb.com/images/ingredients/Cucumber.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "cucumber"
+  },
+  {
+    "slug": "red-pepper",
+    "name": "Болгарский перец",
+    "image": null,
+    "furnitureType": "refrigerator",
+    "mealDbName": "red_pepper"
+  },
+  {
+    "slug": "lettuce",
+    "name": "Листья салата",
+    "image": "https://www.themealdb.com/images/ingredients/Lettuce.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "lettuce"
+  },
+  {
+    "slug": "spinach",
+    "name": "Шпинат",
+    "image": "https://www.themealdb.com/images/ingredients/Spinach.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "spinach"
+  },
+  {
+    "slug": "cabbage",
+    "name": "Капуста",
+    "image": "https://www.themealdb.com/images/ingredients/Cabbage.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "cabbage"
+  },
+  {
+    "slug": "zucchini",
+    "name": "Кабачок",
+    "image": "https://www.themealdb.com/images/ingredients/Zucchini.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "zucchini"
+  },
+  {
+    "slug": "aubergine",
+    "name": "Баклажан",
+    "image": "https://www.themealdb.com/images/ingredients/Aubergine.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "aubergine"
+  },
+  {
+    "slug": "broccoli",
+    "name": "Брокколи",
+    "image": "https://www.themealdb.com/images/ingredients/Broccoli.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "broccoli"
+  },
+  {
+    "slug": "celery",
+    "name": "Сельдерей",
+    "image": "https://www.themealdb.com/images/ingredients/Celery.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "celery"
+  },
+  {
+    "slug": "strawberries",
+    "name": "Клубника",
+    "image": "https://www.themealdb.com/images/ingredients/Strawberries.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "strawberries"
+  },
+  {
+    "slug": "lime",
+    "name": "Лайм",
+    "image": "https://www.themealdb.com/images/ingredients/Lime.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "lime"
+  },
+  {
+    "slug": "ketchup",
+    "name": "Кетчуп",
+    "image": null,
+    "furnitureType": "refrigerator",
+    "mealDbName": "tomato_ketchup"
+  },
+  {
+    "slug": "mustard",
+    "name": "Горчица",
+    "image": "https://www.themealdb.com/images/ingredients/Mustard.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "mustard"
+  },
+  {
+    "slug": "mayonnaise",
+    "name": "Майонез",
+    "image": "https://www.themealdb.com/images/ingredients/Mayonnaise.png",
+    "furnitureType": "refrigerator",
+    "mealDbName": "mayonnaise"
+  },
+  {
     "slug": "garlic",
     "name": "Чеснок",
     "image": "https://www.themealdb.com/images/ingredients/Garlic.png",
@@ -152,5 +348,229 @@
     "image": null,
     "furnitureType": "wardrobe",
     "mealDbName": "olive_oil"
+  },
+  {
+    "slug": "banana",
+    "name": "Банан",
+    "image": "https://www.themealdb.com/images/ingredients/Banana.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "banana"
+  },
+  {
+    "slug": "apple",
+    "name": "Яблоко",
+    "image": "https://www.themealdb.com/images/ingredients/Apples.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "apples"
+  },
+  {
+    "slug": "orange",
+    "name": "Апельсин",
+    "image": "https://www.themealdb.com/images/ingredients/Orange.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "orange"
+  },
+  {
+    "slug": "avocado",
+    "name": "Авокадо",
+    "image": "https://www.themealdb.com/images/ingredients/Avocado.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "avocado"
+  },
+  {
+    "slug": "oats",
+    "name": "Овсяные хлопья",
+    "image": "https://www.themealdb.com/images/ingredients/Oats.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "oats"
+  },
+  {
+    "slug": "bulgur-wheat",
+    "name": "Булгур",
+    "image": null,
+    "furnitureType": "wardrobe",
+    "mealDbName": "bulgur_wheat"
+  },
+  {
+    "slug": "couscous",
+    "name": "Кускус",
+    "image": "https://www.themealdb.com/images/ingredients/Couscous.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "couscous"
+  },
+  {
+    "slug": "lentils",
+    "name": "Чечевица",
+    "image": "https://www.themealdb.com/images/ingredients/Lentils.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "lentils"
+  },
+  {
+    "slug": "chickpeas",
+    "name": "Нут",
+    "image": "https://www.themealdb.com/images/ingredients/Chickpeas.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "chickpeas"
+  },
+  {
+    "slug": "breadcrumbs",
+    "name": "Панировочные сухари",
+    "image": "https://www.themealdb.com/images/ingredients/Breadcrumbs.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "breadcrumbs"
+  },
+  {
+    "slug": "yeast",
+    "name": "Дрожжи",
+    "image": "https://www.themealdb.com/images/ingredients/Yeast.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "yeast"
+  },
+  {
+    "slug": "baking-powder",
+    "name": "Разрыхлитель",
+    "image": null,
+    "furnitureType": "wardrobe",
+    "mealDbName": "baking_powder"
+  },
+  {
+    "slug": "vanilla",
+    "name": "Ваниль",
+    "image": "https://www.themealdb.com/images/ingredients/Vanilla.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "vanilla"
+  },
+  {
+    "slug": "cinnamon",
+    "name": "Корица",
+    "image": "https://www.themealdb.com/images/ingredients/Cinnamon.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "cinnamon"
+  },
+  {
+    "slug": "cumin",
+    "name": "Зира",
+    "image": "https://www.themealdb.com/images/ingredients/Cumin.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "cumin"
+  },
+  {
+    "slug": "paprika",
+    "name": "Паприка",
+    "image": "https://www.themealdb.com/images/ingredients/Paprika.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "paprika"
+  },
+  {
+    "slug": "curry-powder",
+    "name": "Карри",
+    "image": null,
+    "furnitureType": "wardrobe",
+    "mealDbName": "curry_powder"
+  },
+  {
+    "slug": "soy-sauce",
+    "name": "Соевый соус",
+    "image": null,
+    "furnitureType": "wardrobe",
+    "mealDbName": "soy_sauce"
+  },
+  {
+    "slug": "vinegar",
+    "name": "Уксус",
+    "image": "https://www.themealdb.com/images/ingredients/Vinegar.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "vinegar"
+  },
+  {
+    "slug": "honey",
+    "name": "Мёд",
+    "image": "https://www.themealdb.com/images/ingredients/Honey.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "honey"
+  },
+  {
+    "slug": "raisins",
+    "name": "Изюм",
+    "image": "https://www.themealdb.com/images/ingredients/Raisins.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "raisins"
+  },
+  {
+    "slug": "almonds",
+    "name": "Миндаль",
+    "image": "https://www.themealdb.com/images/ingredients/Almonds.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "almonds"
+  },
+  {
+    "slug": "peanuts",
+    "name": "Арахис",
+    "image": "https://www.themealdb.com/images/ingredients/Peanuts.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "peanuts"
+  },
+  {
+    "slug": "peanut-butter",
+    "name": "Арахисовая паста",
+    "image": null,
+    "furnitureType": "wardrobe",
+    "mealDbName": "peanut_butter"
+  },
+  {
+    "slug": "noodles",
+    "name": "Лапша",
+    "image": "https://www.themealdb.com/images/ingredients/Noodles.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "noodles"
+  },
+  {
+    "slug": "tortillas",
+    "name": "Тортильи",
+    "image": "https://www.themealdb.com/images/ingredients/Tortillas.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "tortillas"
+  },
+  {
+    "slug": "puff-pastry",
+    "name": "Слоёное тесто",
+    "image": null,
+    "furnitureType": "wardrobe",
+    "mealDbName": "puff_pastry"
+  },
+  {
+    "slug": "coconut-milk",
+    "name": "Кокосовое молоко",
+    "image": null,
+    "furnitureType": "wardrobe",
+    "mealDbName": "coconut_milk"
+  },
+  {
+    "slug": "dark-chocolate",
+    "name": "Тёмный шоколад",
+    "image": null,
+    "furnitureType": "wardrobe",
+    "mealDbName": "dark_chocolate"
+  },
+  {
+    "slug": "cocoa",
+    "name": "Какао",
+    "image": "https://www.themealdb.com/images/ingredients/Cocoa.png",
+    "furnitureType": "wardrobe",
+    "mealDbName": "cocoa"
+  },
+  {
+    "slug": "chicken-stock",
+    "name": "Куриный бульон",
+    "image": null,
+    "furnitureType": "wardrobe",
+    "mealDbName": "chicken_stock"
+  },
+  {
+    "slug": "tomato-puree",
+    "name": "Томатная паста",
+    "image": null,
+    "furnitureType": "wardrobe",
+    "mealDbName": "tomato_puree"
   }
 ]

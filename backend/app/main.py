@@ -8,7 +8,8 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.routers import health, ingredients, recipes
+from app import database
+from app.routers import auth, health, ingredients, recipes
 
 app = FastAPI(
     title="Recept_zina",
@@ -31,6 +32,10 @@ app.add_middleware(
 app.include_router(health.router, prefix="/api")
 app.include_router(ingredients.router, prefix="/api")
 app.include_router(recipes.router, prefix="/api")
+app.include_router(auth.router, prefix="/api")
+
+# Создаём таблицу пользователей, если базы ещё нет (data/users.db).
+database.init_db()
 
 
 if __name__ == "__main__":
