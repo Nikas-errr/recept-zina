@@ -5,6 +5,8 @@ from app import config
 
 
 class MealDbUnavailable(Exception):
+    pass
+
 
 def _get(path: str, params: dict) -> dict:
     try:
