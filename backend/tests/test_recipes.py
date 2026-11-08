@@ -1,4 +1,3 @@
-"""Тесты POST /api/recipes/search — только правила валидации, без интернета."""
 
 SEARCH_URL = "/api/recipes/search"
 

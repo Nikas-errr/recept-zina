@@ -1,9 +1,3 @@
-"""Роутер POST /api/recipes/search — подбор рецептов по продуктам.
-
-Роутер — «диспетчер»: принимает запрос, проверяет slug-и по каталогу,
-раздаёт работу сервисам (mealdb ходит в интернет, recipe_logic считает)
-и собирает итоговый ответ. Сам по себе в интернет не ходит.
-"""
 
 from fastapi import APIRouter
 from fastapi.responses import JSONResponse
@@ -21,7 +15,6 @@ responses = {
 
 
 def empty_result() -> dict:
-    """Единообразный ответ «ничего не нашли» (код всё равно 200)."""
     return {"recipes": [], "count": 0, "message": "Подходящие рецепты не найдены"}
 
 

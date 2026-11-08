@@ -1,4 +1,3 @@
-"""Тесты чистых функций recipe_logic — самые быстрые, без API и сети."""
 
 from app.services import recipe_logic
 

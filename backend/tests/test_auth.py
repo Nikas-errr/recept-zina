@@ -1,8 +1,3 @@
-"""Тесты авторизации: регистрация, вход, /me.
-
-База на время теста подменяется временной — настоящая data/users.db
-не трогается.
-"""
 
 import pytest
 
@@ -15,7 +10,6 @@ PASSWORD = "super-secret-123"
 
 @pytest.fixture
 def fresh_db(tmp_path, monkeypatch):
-    """Временный файл базы вместо настоящего на время теста."""
     db_file = tmp_path / "users.db"
     monkeypatch.setattr(database, "DB_PATH", db_file)
     database.init_db()

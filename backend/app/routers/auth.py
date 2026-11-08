@@ -1,12 +1,3 @@
-"""Роутер /api/auth/* — регистрация, вход и «кто я такой».
-
-Как это работает для фронтенда:
-1. POST /api/auth/register {email, password} -> сразу токен (автовход).
-2. POST /api/auth/login {email, password} -> токен.
-3. Дальше каждый защищённый запрос фронт сопровождает заголовком
-   Authorization: Bearer <токен> — по нему мы узнаём пользователя.
-Пароли в базе не хранятся — только хеши (см. app/security.py).
-"""
 
 from fastapi import APIRouter, Depends
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
@@ -35,7 +26,6 @@ def _token_response(user_id: int, email: str) -> dict:
 
 @router.post("/auth/register", response_model=TokenResponse, responses=auth_errors)
 def register(payload: UserCreate):
-    """Создаёт пользователя и сразу возвращает токен (регистрация = автовход)."""
     with database.get_connection() as conn:
         already = conn.execute(
             "SELECT id FROM users WHERE email = ?", (payload.email,)
@@ -56,7 +46,6 @@ def register(payload: UserCreate):
 
 @router.post("/auth/login", response_model=TokenResponse, responses=auth_errors)
 def login(payload: UserCreate):
-    """Проверяет email и пароль, выдаёт свежий токен."""
     with database.get_connection() as conn:
         user = conn.execute(
             "SELECT id, email, password_hash FROM users WHERE email = ?",
@@ -74,7 +63,6 @@ def login(payload: UserCreate):
 
 @router.get("/auth/me", response_model=UserOut, responses=auth_errors)
 def me(credentials: HTTPAuthorizationCredentials | None = Depends(bearer)):
-    """Возвращает пользователя по его токену из заголовка Authorization."""
     if credentials is None:
         return JSONResponse(
             status_code=401,

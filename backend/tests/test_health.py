@@ -1,4 +1,3 @@
-"""Тест GET /api/health."""
 
 
 def test_health_answers_ok(client):

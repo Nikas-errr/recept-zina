@@ -1,8 +1,3 @@
-"""Роутер GET /api/ingredients — каталог продуктов из локального JSON.
-
-Никаких баз данных: каталог лежит в data/ingredients.json, а роутер
-только фильтрует его по «шкафчику» и поисковому запросу.
-"""
 
 from fastapi import APIRouter, HTTPException, Query
 

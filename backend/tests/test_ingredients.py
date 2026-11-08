@@ -1,4 +1,3 @@
-"""Тесты GET /api/ingredients. Интернет не нужен: читаем локальный JSON."""
 
 
 def test_returns_only_refrigerator_items(client):
