@@ -18,11 +18,6 @@ def list_ingredients(
     furniture_type: str | None = Query(default=None, alias="furnitureType"),
     search: str | None = Query(default=None),
 ):
-    # furnitureType теперь НЕОБЯЗАТЕЛЕН. Без него отдаётся весь каталог —
-    # так обе вкладки (и холодильник, и шкаф) могут показывать все продукты,
-    # а поиск-подсказка ищет по всему списку сразу.
-    # Если параметр передан — проверяем его по списку из config.py (422 при ошибке)
-    # и оставляем только продукты выбранного «шкафчика».
     ingredients = load_ingredients()
 
     if furniture_type is not None:
@@ -36,8 +31,6 @@ def list_ingredients(
             item for item in ingredients if item.get("furnitureType") == furniture_type
         ]
 
-    # Если передан search — регистронезависимый поиск по slug и name
-    # (по нему фронт строит подсказки, пока пользователь печатает).
     if search:
         needle = search.strip().lower()
         ingredients = [
@@ -46,10 +39,6 @@ def list_ingredients(
             if needle in item["slug"].lower() or needle in item["name"].lower()
         ]
 
-        # Сортировка подсказок: сначала продукты, чьё имя или slug НАЧИНАЕТСЯ
-        # с запроса («мо» → Молоко, Морковь), потом те, где запрос в середине
-        # («лимон»). Внутри групп — по алфавиту. Кортеж (группа, имя) как раз
-        # даёт такой порядок при обычной сортировке.
         def suggestion_rank(item: dict) -> tuple[int, str]:
             name = item["name"].lower()
             starts = name.startswith(needle) or item["slug"].lower().startswith(needle)
@@ -57,7 +46,4 @@ def list_ingredients(
 
         ingredients = sorted(ingredients, key=suggestion_rank)
 
-    # В ответ попадут только slug, name, image — лишние поля (mealDbName
-    # и furnitureType) FastAPI отрежет сам, потому что ответ проверяется
-    # по схеме IngredientsResponse.
     return {"data": ingredients}

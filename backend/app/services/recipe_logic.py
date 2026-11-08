@@ -8,14 +8,8 @@
 import json
 from pathlib import Path
 
-# Каталог лежит в backend/data/ingredients.json. Path(__file__) — путь
-# к этому файлу (backend/app/services/recipe_logic.py), поэтому поднимаемся
-# на 3 уровня вверх: services -> app -> backend.
 DATA_FILE = Path(__file__).resolve().parents[2] / "data" / "ingredients.json"
 
-# Сколько найденных блюд максимум проверяем подробно. TheMealDB на один
-# продукт может отдать десятки блюд, и запрашивать подробности у всех —
-# слишком долго, поэтому берём первые 15.
 MAX_CANDIDATES = 15
 
 
@@ -39,7 +33,6 @@ def clean_slug_list(values) -> list[str]:
         if slug:
             cleaned.append(slug)
 
-    # dict.fromkeys убирает дубликаты и сохраняет исходный порядок.
     return list(dict.fromkeys(cleaned))
 
 
@@ -91,11 +84,9 @@ def split_instructions(text: str) -> list[str]:
     text = (text or "").replace("\r", "\n")
     lines = [line.strip() for line in text.split("\n") if line.strip()]
 
-    # Если в ответе уже есть переносы строк — используем их как границы шагов.
     if len(lines) > 1:
         return lines
 
-    # Иначе делим текст по предложениям.
     sentences = []
     for part in text.replace("! ", ". ").replace("? ", ". ").split("."):
         part = part.strip()

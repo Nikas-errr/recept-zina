@@ -23,7 +23,6 @@ def fresh_db(tmp_path, monkeypatch):
 
 
 def test_register_login_and_me(fresh_db, client):
-    # 1. Регистрация сразу возвращает токен и пользователя.
     r = client.post(f"{AUTH}/register", json={"email": EMAIL, "password": PASSWORD})
     assert r.status_code == 200
     body = r.json()
@@ -31,21 +30,17 @@ def test_register_login_and_me(fresh_db, client):
     assert body["access_token"]
     assert body["token_type"] == "bearer"
 
-    # 2. Повторная регистрация того же email — понятная ошибка 400.
     r = client.post(f"{AUTH}/register", json={"email": EMAIL, "password": PASSWORD})
     assert r.status_code == 400
 
-    # 3. Вход с верным паролем.
     r = client.post(f"{AUTH}/login", json={"email": EMAIL, "password": PASSWORD})
     assert r.status_code == 200
     token = r.json()["access_token"]
 
-    # 4. /me с токеном отвечает данными пользователя.
     r = client.get(f"{AUTH}/me", headers={"Authorization": f"Bearer {token}"})
     assert r.status_code == 200
     assert r.json()["email"] == EMAIL
 
-    # 5. /me без токена — 401.
     r = client.get(f"{AUTH}/me")
     assert r.status_code == 401
 
@@ -60,7 +55,6 @@ def test_login_with_wrong_password(fresh_db, client):
 
 
 def test_email_is_normalized(fresh_db, client):
-    # VASYA@Mail.RU и vasya@mail.ru — один и тот же пользователь.
     client.post(f"{AUTH}/register", json={"email": " VASYA@Mail.RU ", "password": PASSWORD})
 
     r = client.post(f"{AUTH}/login", json={"email": "vasya@mail.ru", "password": PASSWORD})

@@ -17,8 +17,6 @@ from app.schemas import ErrorResponse, TokenResponse, UserCreate, UserOut
 
 router = APIRouter()
 
-# HTTPBearer читает заголовок «Authorization: Bearer <токен>».
-# auto_error=False — сами вернём понятный 401, а не стандартную заглушку.
 bearer = HTTPBearer(auto_error=False)
 
 auth_errors = {
@@ -65,8 +63,6 @@ def login(payload: UserCreate):
             (payload.email,),
         ).fetchone()
 
-    # Одинаковый текст ошибки для «нет такого email» и «неверный пароль»:
-    # так злоумышленник не узнает, какие email уже зарегистрированы.
     if user is None or not security.verify_password(payload.password, user["password_hash"]):
         return JSONResponse(
             status_code=401,

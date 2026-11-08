@@ -17,9 +17,6 @@ app = FastAPI(
     version="1.0.0",
 )
 
-# CORS — разрешение для браузера (фронтенда) обращаться к этому API с другого
-# адреса. Для разработки разрешаем всем — «*». ПЕРЕД ПУБЛИКАЦИЕЙ заменить
-# «*» на точный адрес фронтенда, например: allow_origins=["http://localhost:5173"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -27,18 +24,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Подключаем роутеры. prefix="/api" добавляет /api ко всем их адресам сразу:
-# health отвечает на /api/health, ingredients — на /api/ingredients и т.д.
 app.include_router(health.router, prefix="/api")
 app.include_router(ingredients.router, prefix="/api")
 app.include_router(recipes.router, prefix="/api")
 app.include_router(auth.router, prefix="/api")
 
-# Создаём таблицу пользователей, если базы ещё нет (data/users.db).
 database.init_db()
 
 
 if __name__ == "__main__":
-    # Позволяет запустить сервер командой «python -m app.main»,
-    # но обычный способ из README удобнее: uvicorn app.main:app --reload
     uvicorn.run(app, host="127.0.0.1", port=8000)

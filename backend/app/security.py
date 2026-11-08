@@ -20,8 +20,6 @@ import time
 
 from app import config
 
-# Сколько раз «перемешиваем» пароль при хешировании. Больше — надёжнее,
-# но дольше; 100 000 — обычный разумный минимум.
 _PBKDF2_ITERATIONS = 100_000
 
 
@@ -43,7 +41,6 @@ def verify_password(password: str, stored: str) -> bool:
     digest = hashlib.pbkdf2_hmac(
         "sha256", password.encode(), salt.encode(), _PBKDF2_ITERATIONS
     )
-    # compare_digest сравнивает за постоянное время — защита от хитрых атак.
     return hmac.compare_digest(digest.hex(), expected)
 
 
@@ -60,9 +57,9 @@ def create_token(user_id: int, email: str) -> str:
     """Выпускает JWT: header.payload.signature, подпись — нашим секретом."""
     header = {"alg": "HS256", "typ": "JWT"}
     payload = {
-        "sub": str(user_id),  # «кто» — id пользователя
+        "sub": str(user_id),
         "email": email,
-        "exp": int(time.time()) + config.AUTH_TOKEN_EXPIRE_SECONDS,  # «до какого времени»
+        "exp": int(time.time()) + config.AUTH_TOKEN_EXPIRE_SECONDS,
     }
     signing_input = _b64url(json.dumps(header).encode()) + "." + _b64url(
         json.dumps(payload).encode()
@@ -87,5 +84,4 @@ def decode_token(token: str) -> dict | None:
             return None
         return payload
     except Exception:
-        # Ломается структура, base64, json — всё это значит «токен плохой».
         return None

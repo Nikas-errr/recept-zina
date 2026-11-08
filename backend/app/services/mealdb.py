@@ -22,11 +22,9 @@ def _get(path: str, params: dict) -> dict:
             params=params,
             timeout=config.REQUEST_TIMEOUT,
         )
-        response.raise_for_status()  # статус 4xx/5xx превращается в исключение
+        response.raise_for_status()
         return response.json()
     except (requests.RequestException, ValueError):
-        # RequestException — проблемы сети или статуса ответа,
-        # ValueError — пришёл не JSON. В обоих случаях сервис недоступен.
         raise MealDbUnavailable("TheMealDB недоступен")
 
 

@@ -12,10 +12,6 @@ email и пароль на POST /auth/login.
 import sqlite3
 from pathlib import Path
 
-# Файл базы лежит рядом с остальными данными проекта (backend/data).
-# Этот файл находится в backend/app/, поэтому поднимаемся на 1 уровень
-# выше: app -> backend (в recipe_logic.py было parents[2], потому что
-# он лежит глубже — в app/services/).
 DB_PATH = Path(__file__).resolve().parents[1] / "data" / "users.db"
 
 
