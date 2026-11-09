@@ -24,6 +24,7 @@ def empty_result() -> dict:
     responses=responses,
 )
 def search_recipes(request: RecipeSearchRequest):
+    """Подбор рецептов по выбранным продуктам с исключением аллергенов"""
     catalog = {item["slug"]: item for item in recipe_logic.load_ingredients()}
 
     unknown = [

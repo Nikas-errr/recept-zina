@@ -13,6 +13,7 @@ def list_ingredients(
     furniture_type: str | None = Query(default=None, alias="furnitureType"),
     search: str | None = Query(default=None),
 ):
+    """Каталог продуктов: фильтр по «шкафчику» и поиск с подсказками"""
     ingredients = load_ingredients()
 
     if furniture_type is not None:

@@ -8,7 +8,7 @@ from app.routers import auth, health, ingredients, recipes
 
 app = FastAPI(
     title="Recept_zina",
-    description="Подбор рецептов по продуктам из холодильника или шкафа.",
+    description="Подбор рецептов по продуктам из холодильника и шкафа с учётом аллергий",
     version="1.0.0",
 )
 

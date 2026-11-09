@@ -26,6 +26,7 @@ def _token_response(user_id: int, email: str) -> dict:
 
 @router.post("/auth/register", response_model=TokenResponse, responses=auth_errors)
 def register(payload: UserCreate):
+    """Регистрация: создаёт пользователя и сразу возвращает токен"""
     with database.get_connection() as conn:
         already = conn.execute(
             "SELECT id FROM users WHERE email = ?", (payload.email,)
@@ -46,6 +47,7 @@ def register(payload: UserCreate):
 
 @router.post("/auth/login", response_model=TokenResponse, responses=auth_errors)
 def login(payload: UserCreate):
+    """Вход по email и паролю, возвращает токен"""
     with database.get_connection() as conn:
         user = conn.execute(
             "SELECT id, email, password_hash FROM users WHERE email = ?",
@@ -63,6 +65,7 @@ def login(payload: UserCreate):
 
 @router.get("/auth/me", response_model=UserOut, responses=auth_errors)
 def me(credentials: HTTPAuthorizationCredentials | None = Depends(bearer)):
+    """Данные текущего пользователя по его токену"""
     if credentials is None:
         return JSONResponse(
             status_code=401,
