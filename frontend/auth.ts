@@ -6,10 +6,11 @@ import NextAuth from "next-auth"
 import { api } from "@/app/api/client"
 
 type LoginResponse = {
-    data: {
+    access_token: string
+    token_type: string
+    user: {
         id: string
         email: string
-        name: string
     }
 }
 
@@ -28,18 +29,17 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
                 }
 
                 try {
-
                     const { data } = await api.post<LoginResponse>('/auth/login', {
                         email: credentials.email,
                         password: credentials.password
                     })
 
-                    const user = data.data ?? data
-
-                    if (!user) return null
+                    if (!data?.user) return null
 
                     return {
-                        id: String(user.id),
+                        id: String(data.user.id),
+                        email: data.user.email,
+                        accessToken: data.access_token
                     }
 
                 } catch (error) {
@@ -53,11 +53,17 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     trustHost: true,
     callbacks: {
         async jwt({ token, user }) {
-            if (user) token.id = user.id
+            if (user) {
+                token.id = user.id
+                token.accessToken = user.accessToken
+            }
             return token
         },
         async session({ session, token }) {
-            if (session.user) session.user.id = token.id as string
+            if (session.user) {
+                session.user.id = token.id as string
+                session.user.accessToken = token.accessToken as string | undefined
+            }
             return session
         },
     },

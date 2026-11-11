@@ -1,3 +1,6 @@
 export enum ApiRoutes {
-    INGREDIENTS = 'ingredients'
+    INGREDIENTS = '/api/ingredients',
+    RECIPES_SEARCH = '/api/recipes/search',
+    REGISTER = '/api/auth/register',
+    LOGIN = '/api/auth/login',
 }

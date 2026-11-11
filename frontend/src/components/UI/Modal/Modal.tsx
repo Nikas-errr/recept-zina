@@ -27,10 +27,13 @@ export function Modal({ showModal, setShowModal }: Props) {
                 ]
                 : 'hidden'
         )}>
-            <div ref={ref} className='w-fit h-fit flex items-center justify-center gap-x-[50px]'>
-                <Wardrobe error={error} setError={setError} />
-                <Refrigerator error={error} setError={setError} />
-            </div>
+            {/* Мебель создаётся при каждом открытии: каждый раз свежий запрос в API */}
+            {showModal && (
+                <div ref={ref} className='w-fit h-fit flex items-center justify-center gap-x-[50px]'>
+                    <Wardrobe error={error} setError={setError} />
+                    <Refrigerator error={error} setError={setError} />
+                </div>
+            )}
         </div>
     )
 }

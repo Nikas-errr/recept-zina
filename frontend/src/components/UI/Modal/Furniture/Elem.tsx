@@ -40,7 +40,8 @@ export function Elem({ countObjs, toggleIngredient, isSelected, obj, setError }:
                 : 'opacity-70 scale-[90%]',
             animate && 'animate-shake'
         )} onClick={clickElem}>
-            <Image src={obj.image} alt='' draggable='false'
+            <Image src={obj.image || '/milk.png'} alt='' draggable='false'
+                width={50} height={100}
                 className="w-[50px] h-[100px] mx-auto" />
             <div className={cn(
                 'text-[14px] text-center font-light transition-[opacity] duration-300',
